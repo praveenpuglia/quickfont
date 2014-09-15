@@ -7,6 +7,7 @@
 * Scrap area for test driving fonts.
 
 ###Installation : ###
+
 QuickFont is easy to install.
 
 * Clone the repository/download the zip.
