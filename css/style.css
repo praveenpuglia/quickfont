@@ -1,0 +1,125 @@
+* {
+  /* Rough Reset */
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background: #333;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ==============================
+=            Header            =
+============================== */
+.page-header {
+  position: fixed;
+  background: #333;
+  z-index: 11;
+  width: 100%;
+  max-width: 960px;
+  box-shadow: 0 2px 2px -2px;
+}
+.page-header ul {
+  margin: auto;
+  text-align: center;
+  list-style: none;
+  margin-bottom: 30px;
+}
+.page-header ul li {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 10px;
+}
+.title {
+  font-family: 'Open Sans', sans-serif;
+  color: #18ABDC;
+  text-align: center;
+  font-weight: 100;
+}
+
+/* -----  End of Header  ------ */
+/* ========================================
+=            Content and List            =
+======================================== */
+.content {
+  padding-top: 180px;
+}
+.fonts li {
+  list-style: none;
+  border-bottom: 1px solid #18ABDC;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  padding: 10px;
+  font-size: 24px;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+.fonts li a {
+  display: block;
+  color: #fff;
+}
+.fonts li:hover {
+  background: #444;
+}
+span.variant {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  background: #18ABDC;
+}
+span.font-category {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #009d4f;
+  border-radius: 0;
+}
+
+/* -----  End of Content and List  ------ */
+/* ===================================
+=            Search Area            =
+=================================== */
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid;
+  width: 100%;
+  font-family: Open Sans, sans-serif;
+}
+
+/* -----  End of Search Area  ------ */
+/* ==========  SMALL DEVICES  ========== */
+@media screen and (max-width:767px) {
+  .tagline {
+    display: none;
+  }
+  .page-header ul {
+    text-align: left;
+    padding-left: 10px;
+    display: none;
+  }
+  .content {
+    padding-top: 83px;
+  }
+}

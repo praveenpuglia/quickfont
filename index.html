@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>QuickFont</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:100,300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <!-- Container -->
+  	<div class="container">
+      <!-- Header -->
+  		<header class="page-header">
+  			<h1 class="title">QuickFont<span class="tagline"> &mdash; Shortcut to Google Webfonts</span></h1>
+        <ul>
+          <li>All font names are editable. You can click on them and type whatever you want! Go Ahead!</li>
+          <li>Clicking on any row will take you to that font's quick use page.
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="praveenpuglia" data-hashtags="javascript,knockoutjs,fun,code,hack">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </li>
+        </ul>
+        <div class="search-bar">
+          <input type="search" autocomplete="on" data-bind="event : {keyup : searchList}" placeholder="Search...">
+        </div>
+  		</header>
+      <!-- Header End -->
+
+      <!-- Content -->
+  		<div class="content">
+  			<ul class="fonts" data-bind="foreach:fontsList">
+          <link rel="stylesheet" data-bind="attr : {href : url}" type="text/css">          
+          <li data-bind="style:{fontFamily: family}, attr:{'data-category':category}">
+            <a target="_blank" data-bind="attr : {href : quickUseUrl}">
+            <span contenteditable data-bind="text : family" onclick="return false;">Loading...</span>
+            <div class="variants-list" data-bind="foreach : variants">
+              <span class="variant" data-bind="text : $data">Loading...</span>
+            </div>
+            <span class="font-category variant" data-bind="text: category"></span>
+            </a>
+          </li>          
+  			</ul>
+  		</div>
+      <!-- Content End -->
+
+  	</div>
+    <!-- Container End -->
+
+    <!-- Scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/font.js"></script>    
+  	<script src="js/quickfont-viewmodel.js"></script>    
+  	<script src="js/boot.js"></script>
+  </body>
+</html>
+
