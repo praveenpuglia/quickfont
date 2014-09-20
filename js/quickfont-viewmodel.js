@@ -37,7 +37,7 @@ var QuickfontViewModel = function() {
    */
   _self.searchList = function(target, event) {
     var filter = event.target.value.toLowerCase();
-    var lis = document.querySelectorAll('.samples li');
+    var lis = document.querySelectorAll('.fonts li');
     for (var i = 0; i < lis.length; i++) {
       var name = lis[i].getAttribute("data-family");
       if (name.toLowerCase().indexOf(filter) == 0)
