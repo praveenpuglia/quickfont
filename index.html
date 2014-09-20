@@ -34,7 +34,7 @@
   		<div class="content">
   			<ul class="fonts" data-bind="foreach:fontsList">
           <link rel="stylesheet" data-bind="attr : {href : url}" type="text/css">          
-          <li data-bind="style:{fontFamily: family}, attr:{'data-category':category}">
+          <li data-bind="style:{fontFamily: family}, attr:{'data-category':category, 'data-family' : family}">
             <a target="_blank" data-bind="attr : {href : quickUseUrl}">
             <span contenteditable data-bind="text : family" onclick="return false;">Loading...</span>
             <div class="variants-list" data-bind="foreach : variants">

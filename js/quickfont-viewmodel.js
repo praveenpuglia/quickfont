@@ -36,11 +36,11 @@ var QuickfontViewModel = function() {
    * @param  {object} event
    */
   _self.searchList = function(target, event) {
-    var filter = event.target.value.toUpperCase();
+    var filter = event.target.value.toLowerCase();
     var lis = document.querySelectorAll('.samples li');
     for (var i = 0; i < lis.length; i++) {
-      var name = lis[i].querySelector('span:first-child').innerHTML;
-      if (name.toUpperCase().indexOf(filter) == 0)
+      var name = lis[i].getAttribute("data-family");
+      if (name.toLowerCase().indexOf(filter) == 0)
         lis[i].style.display = 'list-item';
       else
         lis[i].style.display = 'none';
